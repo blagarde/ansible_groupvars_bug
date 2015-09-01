@@ -1,0 +1,13 @@
+---
+- name: Roles for test
+  hosts: test
+  tasks:
+    - debug: var=foo
+    - debug: var=bar
+    - name: bar
+      shell: date
+      when: bar
+    - name: not bar
+      shell: date
+      when: not bar
+
