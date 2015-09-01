@@ -1,16 +1,5 @@
 # ansible_groupvars_bug
 Minimal playbook to repro a bug with Ansible groupvars
-```bash
-$ tree 
-.
-├── group_vars
-│   └── all.yml     <- bar: "{{foo == 'value2'}}"
-├── test
-│   ├── group_vars
-│   │   └── all.yml <- foo: value1
-│   └── inventory
-└── test.yml        <- "when: not bar" gets incorrectly skipped although bar correctly recognized as False
-```
 
 ## Repro steps
 ```bash
