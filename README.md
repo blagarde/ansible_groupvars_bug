@@ -9,7 +9,7 @@ $ tree
 │   ├── group_vars
 │   │   └── all.yml <- foo: value1
 │   └── inventory
-└── test.yml        <- "when: not bar" gets incorrectly skipped
+└── test.yml        <- "when: not bar" gets incorrectly skipped although bar correctly recognized as False
 ```
 
 ## Repro steps
